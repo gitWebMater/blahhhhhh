@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You are gay and a goat</title>
+<style>
+  :root {
+    --bg: #fff7e6;
+    --ink: #2b1b3d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #1b1230; --ink: #fff7e6; }
+  }
+  html, body { height: 100%; margin: 0; }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+    text-align: center;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+  .flag {
+    width: min(70vw, 420px);
+    height: 14px;
+    border-radius: 7px;
+    background: linear-gradient(90deg,
+      #e40303 0 16.66%, #ff8c00 0 33.33%, #ffed00 0 50%,
+      #008026 0 66.66%, #004dff 0 83.33%, #750787 0);
+  }
+  .goat {
+    font-size: clamp(5rem, 22vw, 10rem);
+    line-height: 1;
+    display: inline-block;
+    transform-origin: 50% 90%;
+    animation: headbang 0.5s ease-in-out infinite;
+    transform-origin: 50% 100%;
+  }
+  @keyframes headbang {
+    0%   { transform: rotate(-4deg) translateY(0); }
+    35%  { transform: rotate(22deg) translateY(10px) scaleY(0.94); }
+    55%  { transform: rotate(22deg) translateY(10px) scaleY(0.94); }
+    100% { transform: rotate(-4deg) translateY(0); }
+  }
+  h1 { animation: bob 0.5s ease-in-out infinite alternate; }
+  @keyframes bob {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-6px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .goat, h1 { animation: none; }
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    line-height: 1.1;
+  }
+</style>
+</head>
+<body>
+  <div class="flag" aria-hidden="true"></div>
+  <div class="goat" role="img" aria-label="goat">🐐</div>
+  <h1>You are gay for ghosting</h1>
+  <div class="flag" aria-hidden="true"></div>
+</body>
+</html>

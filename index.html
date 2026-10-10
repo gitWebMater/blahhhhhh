@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You are a gay</title>
+<style>
+  :root {
+    --bg: #fff7e6;
+    --ink: #2b1b3d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #1b1230; --ink: #fff7e6; }
+  }
+  html, body { height: 100%; margin: 0; }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+    text-align: center;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+  .flag {
+    width: min(70vw, 420px);
+    height: 14px;
+    border-radius: 7px;
+    background: linear-gradient(90deg,
+      #e40303 0 16.66%, #ff8c00 0 33.33%, #ffed00 0 50%,
+      #008026 0 66.66%, #004dff 0 83.33%, #750787 0);
+  }
+  h1 { animation: bob 0.5s ease-in-out infinite alternate; }
+  @keyframes bob {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-6px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    h1 { animation: none; }
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    line-height: 1.1;
+  }
+  .stage { display: flex; align-items: flex-end; justify-content: center; gap: clamp(1rem, 6vw, 3rem); }
+  .fairy { width: clamp(90px, 24vw, 170px); height: auto; overflow: visible; animation: sway 1.4s ease-in-out infinite alternate; transform-origin: 50% 100%; }
+  .wing { transform-origin: 60px 62px; animation: flap 0.35s ease-in-out infinite alternate; }
+  .wing.r { transform-origin: 60px 62px; }
+  @keyframes sway { from { transform: rotate(-5deg) translateY(0); } to { transform: rotate(5deg) translateY(-8px); } }
+  @keyframes flap { from { transform: scaleX(1); } to { transform: scaleX(0.82); } }
+  @media (prefers-reduced-motion: reduce) { .fairy, .wing { animation: none; } }
+</style>
+</head>
+<body>
+  <div class="flag" aria-hidden="true"></div>
+  <div class="stage">
+    <svg class="fairy" viewBox="0 0 120 170" role="img" aria-label="A male fairy with wings wearing a pink dress">
+      <g class="wing" opacity=".75"><ellipse cx="30" cy="55" rx="26" ry="38" fill="#b9e7ff" stroke="#6bb8e8" stroke-width="2" transform="rotate(-22 30 55)"/></g>
+      <g class="wing r" opacity=".75"><ellipse cx="90" cy="55" rx="26" ry="38" fill="#d9c8ff" stroke="#9b7be0" stroke-width="2" transform="rotate(22 90 55)"/></g>
+      <path d="M60 68 L36 150 Q60 162 84 150 Z" fill="#ff8fc7" stroke="#d6559a" stroke-width="2"/>
+      <path d="M48 68 Q60 76 72 68 L70 92 L50 92 Z" fill="#ff8fc7" stroke="#d6559a" stroke-width="2"/>
+      <rect x="36" y="72" width="10" height="26" rx="5" fill="#f2c9a0"/>
+      <rect x="74" y="72" width="10" height="26" rx="5" fill="#f2c9a0"/>
+      <rect x="49" y="148" width="7" height="16" rx="3" fill="#f2c9a0"/>
+      <rect x="64" y="148" width="7" height="16" rx="3" fill="#f2c9a0"/>
+      <circle cx="60" cy="46" r="20" fill="#f2c9a0"/>
+      <path d="M40 44 Q40 22 60 22 Q80 22 80 44 Q72 32 60 33 Q48 32 40 44 Z" fill="#5a3a22"/>
+      <path d="M44 56 Q60 74 76 56 Q76 62 60 66 Q44 62 44 56 Z" fill="#8a6a4a" opacity=".45"/>
+      <circle cx="53" cy="46" r="2.2" fill="#2b1b3d"/><circle cx="67" cy="46" r="2.2" fill="#2b1b3d"/>
+      <path d="M52 55 Q60 61 68 55" fill="none" stroke="#2b1b3d" stroke-width="2" stroke-linecap="round"/>
+      <line x1="90" y1="86" x2="108" y2="58" stroke="#8a5a2b" stroke-width="3" stroke-linecap="round"/>
+      <path d="M108 46 l3 8 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1z" fill="#ffd93b" stroke="#e0a800" stroke-width="1.5"/>
+    </svg>
+  </div>
+  <h1>You are gay for ghosting</h1>
+  <div class="flag" aria-hidden="true"></div>
+</body>
+</html>
